@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top-section{
+    display: flex;
+    justify-content: space-between;
+}
+.top-section h1{
+    font-size: 1.6rem;
+}
+#updated h6{
+    font-size: 0.8rem;
+}
+h4{
+    font-size: 1em;
+}
+h3{
+    font-size: 1.2em;
+}
+/* h5{
+    font-size: 0.8em;
+} */
+/* #dropdown{
+    height: 400px;
+    overflow: scroll;
+    cursor: pointer;
+}
+#dropdown::-webkit-scrollbar {
+    display: none;
+} */
+.btn-group button {
+    border: none !important;
+    padding: -7px 5px !important;
+}
+.main-container{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 0 20px;
+}
+.left-container{
+    margin: 20px 15px;
+    /* flex: 0.9; */
+}
+.right-container{
+    height: 620px;
+    overflow: scroll;
+    cursor: pointer;
+}
+.right-container::-webkit-scrollbar {
+    display: none;
+}
+.right-container table thead tr{
+    position: sticky;
+    top: 0;
+    background: #fff;
+}
+#InfoBox{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+    text-align: center;
+    cursor: pointer;
+}
+.card:nth-child(1):hover{
+    background: rgba(255, 0, 0, 0.105);
+}
+.card:nth-child(4):hover{
+    background: rgba(0, 119, 255, 0.219);
+}
+.card:nth-child(2):hover{
+    background: rgba(21, 255, 0, 0.219);
+}
+.card:nth-child(3):hover{
+    background: rgba(255, 0, 0, 0.105);
+}
+.card:nth-child(5):hover{
+    background: rgba(21, 255, 0, 0.219);
+}
+.card:nth-child(6):hover{
+    background: rgba(0, 119, 255, 0.219);
+}
+.card:nth-child(7):hover{
+    background: rgba(0, 119, 255, 0.219);
+}
+.card:nth-child(8):hover{
+    background: rgba(255, 0, 0, 0.105);
+}
+#InfoBox h5{
+    color: #222;
+}
+.card{
+    margin: 10px 5px !important;
+}
+.main-right{
+    margin: 20px 0;
+}
+canvas{
+   margin: 20px 0;
+   cursor: pointer;
+}
+#preloader{
+    background: #fff url("https://i.pinimg.com/originals/35/b2/5a/35b25ac379b8e771bbd3fd956f4d31bb.gif") no-repeat fixed center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    background-size: 50%;
+}
+@media only screen and (max-width:700px){
+    .main-container{
+        flex-direction: column;
+    }
+    .card{
+        width: 39vw !important;
+    }
+    iframe{
+        width: 100% !important;
+        height: 50vh !important;
+    }
+    #updated h6{
+        font-size: 0.5rem;
+    }
+}
+
+
