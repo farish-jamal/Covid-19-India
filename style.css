@@ -103,7 +103,7 @@ canvas{
         flex-direction: column;
     }
     .card{
-        width: 39vw !important;
+        width: 35vw !important;
     }
     #map{
         width: 100% !important;
