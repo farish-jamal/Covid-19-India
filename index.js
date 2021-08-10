@@ -54,7 +54,7 @@ async function getCovidData() {
              <div class="card p-4" style="width: 11rem;>
                <div class="card-body">
                <h6 class="card-title">TOTAL ACTIVE</h6>
-               <h4 class="card-title"style="color:blue">${jsData.statewise[0].active}</h4>
+               <h3 class="card-title"style="color:blue">${jsData.statewise[0].active}</h3>
                </div>
                </div>
              <div class="card" style="width: 11rem;">
@@ -120,17 +120,39 @@ async function getCovidData() {
 getCovidData();
 
 function updateMap() {
+  let n = 0;
   fetch('https://disease.sh/v3/covid-19/countries').then(response => response.json())
     .then(data => {
-      mapboxgl.accessToken = 'pk.eyJ1IjoiZmFyaXNoMTIyMiIsImEiOiJja3M1amFxeTQyZ2kyMnFtcnB1bWxpbTF6In0.PHUtYjGv2zMBkuRk2a-zSA';
-      var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [81, 23],
-        zoom: 3
-      });
-      console.log(data);
-    })
+      console.log(data[n]);
+      for(let i=0; i<= 200; i++){
+      // data.array.forEach(element => {
+        latitude = data[n].countryInfo.lat;
+        longitude = data[n].countryInfo.long;
+        casesT = data[n].todayCases;
+        if(casesT>255){
+          color = "rgb(255,0,0)"
+        }
+        else{
+          color = `rgb(${casesT},0,0)`
+        }
+        // console.log(latitude, longitude)
+
+        const marker = new mapboxgl.Marker({
+          draggable: false,
+          color: color
+          })
+          .setLngLat([longitude, latitude])
+          .addTo(map);
+          n++
+      };
+    });
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZmFyaXNoMTIyMiIsImEiOiJja3M1amFxeTQyZ2kyMnFtcnB1bWxpbTF6In0.PHUtYjGv2zMBkuRk2a-zSA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [81, 23],
+    zoom: 2
+  })
 }
 
 updateMap();
