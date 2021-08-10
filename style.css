@@ -103,7 +103,7 @@ canvas{
         flex-direction: column;
     }
     .card{
-        width: 35vw !important;
+        width: 100vw !important;
     }
     #map{
         width: 100% !important;
@@ -111,6 +111,12 @@ canvas{
     }
     #updated h6{
         font-size: 0.5rem;
+    }
+    .main-container{
+        margin: 0  0;
+    }
+    .main-right{
+        margin: 0 20px;
     }
 }
 

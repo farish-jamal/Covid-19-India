@@ -7,7 +7,7 @@ async function getCovidData() {
   // console.log(jsonData)
 
   var jsData = await jsonData.json();
-  // console.log(jsData);
+  console.log(jsData);
   // console.log(jsData.tested[516])
 
   var n = 1;
@@ -33,28 +33,25 @@ async function getCovidData() {
   InfoBx = `<div class="card" style="width: 14rem;">
                  <div class="card-body">
                  <h6 class="card-title">TOTAL CONFIRMED</h6>
-                 <h4 class="card-title" style="color:red"> +${jsData.cases_time_series[557].dailyconfirmed}</h4>
                  <h5 class="card-title" style="color:red">${jsData.statewise[0].confirmed}</h5>
                </div>
              </div>
                <div class="card" style="width: 13rem;">
                <div class="card-body">
                <h6 class="card-title">TOTAL RECOVERED</h6>
-               <h4 class="card-title" style="color:green"> +${jsData.cases_time_series[557].dailyrecovered}</h4>
                <h5 class="card-title" style="color:green">${jsData.statewise[0].recovered}</h5>
                </div>
                </div>
                <div class="card" style="width: 11rem;">
                <div class="card-body">
                <h6 class="card-title">TOTAL DEATHS</h6>
-               <h4 class="card-title" style="color:red"> +${jsData.cases_time_series[557].dailydeceased}</h4>
                <h5 class="card-title" style="color:red">${jsData.statewise[0].deaths}</h5>
                </div>
              </div>
-             <div class="card p-4" style="width: 11rem;>
+             <div class="card p-3" style="width: 11rem;>
                <div class="card-body">
                <h6 class="card-title">TOTAL ACTIVE</h6>
-               <h3 class="card-title"style="color:blue">${jsData.statewise[0].active}</h3>
+               <h5 class="card-title"style="color:blue">${jsData.statewise[0].active}</h5>
                </div>
                </div>
              <div class="card" style="width: 11rem;">
@@ -150,7 +147,7 @@ function updateMap() {
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [81, 23],
+    center: [81, 19],
     zoom: 2
   })
 }
