@@ -19,17 +19,6 @@ h4{
 h3{
     font-size: 1.2em;
 }
-/* h5{
-    font-size: 0.8em;
-} */
-/* #dropdown{
-    height: 400px;
-    overflow: scroll;
-    cursor: pointer;
-}
-#dropdown::-webkit-scrollbar {
-    display: none;
-} */
 .btn-group button {
     border: none !important;
     padding: -7px 5px !important;
@@ -37,12 +26,10 @@ h3{
 .main-container{
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     margin: 0 20px;
 }
 .left-container{
     margin: 20px 15px;
-    /* flex: 0.9; */
 }
 .right-container{
     height: 620px;
@@ -96,9 +83,6 @@ h3{
 .card{
     margin: 10px 5px !important;
 }
-.main-right{
-    margin: 20px 0;
-}
 canvas{
    margin: 20px 0;
    cursor: pointer;
@@ -118,7 +102,7 @@ canvas{
     .card{
         width: 39vw !important;
     }
-    iframe{
+    #map{
         width: 100% !important;
         height: 50vh !important;
     }
